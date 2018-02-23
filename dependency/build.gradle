@@ -8,6 +8,7 @@ group = 'dependency'
 version = '1.0'
 
 apply plugin: 'maven'
+apply plugin: 'java'
 
 task testZip(type: Zip) {
     group 'Build'

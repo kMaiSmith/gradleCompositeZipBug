@@ -7,13 +7,20 @@
 
 configurations {
     zipBug
+    workingJar
 }
 
 dependencies {
     zipBug 'dependency:dependency:1.0@zip'
+    workingJar 'dependency:dependency:1.0'
 }
 
 task zipBug(type: Copy) {
     from configurations.zipBug
+    into 'tmp'
+}
+
+task workingJar(type: Copy) {
+    from configurations.workingJar
     into 'tmp'
 }

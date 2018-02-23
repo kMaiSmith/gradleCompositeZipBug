@@ -11,8 +11,8 @@ apply plugin: 'maven'
 apply plugin: 'java'
 
 task testZip(type: Zip) {
-    group 'Build'
-    description 'Assembles the dependency zip'
+    group 'Bug Demonstration'
+    description 'Assembles the dependency zip to be consumed by the parent build'
     from('./') {
         include 'src/'
     }

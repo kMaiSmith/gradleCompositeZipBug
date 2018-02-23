@@ -16,11 +16,15 @@ dependencies {
 }
 
 task zipBug(type: Copy) {
+    group 'Bug Demonstration'
+    description 'Should consume the zip archive from the "dependency" build and dump it in tmp/'
     from configurations.zipBug
     into 'tmp'
 }
 
 task workingJar(type: Copy) {
+    group 'Bug Demonstration'
+    description 'Consumes the jar archive from the "dependency" build and dumps it in tmp/'
     from configurations.workingJar
     into 'tmp'
 }
